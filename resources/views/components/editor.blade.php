@@ -8,7 +8,7 @@
             this.value = event.target.innerHTML
         }
     }"
-    class="ld-editor"
+    class="sb-editor"
 >
     <input
         type="hidden"
@@ -29,7 +29,7 @@
 
 @once
     @push('styles')
-        <link rel="stylesheet" href="{{ config('ld-editor.trix_css_url') }}">
+        <link rel="stylesheet" href="{{ config('sb-editor.trix_css_url') }}">
         <style>
             trix-toolbar .trix-button-group { margin-bottom: 0; }
             trix-editor { min-height: 200px; }
@@ -39,6 +39,6 @@
         </style>
     @endpush
     @push('scripts')
-        <script src="{{ config('ld-editor.trix_js_url') }}"></script>
+        <script src="{{ config('sb-editor.trix_js_url') }}"></script>
     @endpush
 @endonce

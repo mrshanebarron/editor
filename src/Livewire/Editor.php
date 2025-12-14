@@ -25,10 +25,10 @@ class Editor extends Component
         ?string $inputId = null
     ): void {
         $this->value = $value;
-        $this->placeholder = $placeholder ?? config('ld-editor.placeholder', 'Write something...');
+        $this->placeholder = $placeholder ?? config('sb-editor.placeholder', 'Write something...');
         $this->autofocus = $autofocus;
         $this->disabled = $disabled;
-        $this->uploadEndpoint = $uploadEndpoint ?? config('ld-editor.upload_endpoint');
+        $this->uploadEndpoint = $uploadEndpoint ?? config('sb-editor.upload_endpoint');
         $this->inputId = $inputId ?? 'editor-' . uniqid();
     }
 
@@ -39,6 +39,6 @@ class Editor extends Component
 
     public function render()
     {
-        return view('ld-editor::livewire.editor');
+        return view('sb-editor::livewire.editor');
     }
 }

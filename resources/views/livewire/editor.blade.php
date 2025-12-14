@@ -5,7 +5,7 @@
         }
     }"
     wire:ignore
-    class="ld-editor"
+    class="sb-editor"
 >
     <input
         type="hidden"
@@ -23,7 +23,7 @@
 </div>
 
 @assets
-    <link rel="stylesheet" href="{{ config('ld-editor.trix_css_url') }}">
+    <link rel="stylesheet" href="{{ config('sb-editor.trix_css_url') }}">
     <style>
         trix-toolbar .trix-button-group { margin-bottom: 0; }
         trix-editor { min-height: 200px; }
@@ -31,5 +31,5 @@
             color: #9ca3af;
         }
     </style>
-    <script src="{{ config('ld-editor.trix_js_url') }}"></script>
+    <script src="{{ config('sb-editor.trix_js_url') }}"></script>
 @endassets

@@ -18,13 +18,13 @@ class Editor extends Component
         public ?string $uploadEndpoint = null,
         ?string $id = null
     ) {
-        $this->placeholder = $placeholder ?? config('ld-editor.placeholder', 'Write something...');
-        $this->uploadEndpoint = $uploadEndpoint ?? config('ld-editor.upload_endpoint');
+        $this->placeholder = $placeholder ?? config('sb-editor.placeholder', 'Write something...');
+        $this->uploadEndpoint = $uploadEndpoint ?? config('sb-editor.upload_endpoint');
         $this->inputId = $id ?? 'editor-' . uniqid();
     }
 
     public function render(): View
     {
-        return view('ld-editor::components.editor');
+        return view('sb-editor::components.editor');
     }
 }

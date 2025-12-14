@@ -20,7 +20,7 @@
 import { ref, onMounted, watch } from 'vue';
 
 export default {
-  name: 'LdEditor',
+  name: 'SbEditor',
   props: {
     modelValue: { type: String, default: '' },
     placeholder: { type: String, default: 'Write something...' },
