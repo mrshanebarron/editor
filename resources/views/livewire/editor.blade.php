@@ -1,24 +1,24 @@
 <div
     x-data="{
         init() {
-            this.$refs.input.value = @js($value)
+            this.$refs.input.value = @js($this->value)
         }
     }"
     wire:ignore
-    class="sb-editor"
+    style="position: relative;"
 >
     <input
         type="hidden"
         x-ref="input"
-        id="{{ $inputId }}"
+        id="{{ $this->inputId }}"
     >
     <trix-editor
-        input="{{ $inputId }}"
-        placeholder="{{ $placeholder }}"
-        @if($autofocus) autofocus @endif
-        @if($disabled) disabled @endif
+        input="{{ $this->inputId }}"
+        placeholder="{{ $this->placeholder }}"
+        @if($this->autofocus) autofocus @endif
+        @if($this->disabled) disabled @endif
         x-on:trix-change="$wire.set('value', $event.target.innerHTML)"
-        class="prose prose-sm max-w-none focus:outline-none min-h-[200px] p-3 border border-gray-300 rounded-md"
+        style="min-height: 200px; padding: 12px; border: 1px solid #d1d5db; border-radius: 6px; outline: none;"
     ></trix-editor>
 </div>
 
